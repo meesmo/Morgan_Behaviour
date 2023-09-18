@@ -121,9 +121,9 @@ for trial in trials:
     data.t_sample_tone[trial] = time.time() * 1000 - data._t_start_abs[trial]
 
     tone = rule.R_tone
-    if trial < 40:
+    if trial < 30:
         _opto_trial = False
-    elif trial > 40:
+    elif trial > 30:
         _opto_trial = np.random.rand() < 0.5
 
     data.opto_trial[trial] = _opto_trial
