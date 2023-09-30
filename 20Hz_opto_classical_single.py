@@ -91,7 +91,7 @@ tonefreq = core.PureTone(tone_freq, sample_tone_length)
 
 if ttl_experiment == 'y':
     # Set up ttl class instances opto stim TTL output
-    TTL_opto = core.ttl(TTL_opto_PIN, opto_freq)
+    TTL_opto = core.ttl(TTL_opto_PIN, opto_freq, ISI_length = 0.045)
 
 # ------------------------------------------------------------------------------
 # Initialize experiment:
