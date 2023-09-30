@@ -120,7 +120,7 @@ for trial in trials:
     data.sample_tone[trial] = 'R'
     data.t_sample_tone[trial] = time.time() * 1000 - data._t_start_abs[trial]
 
-    tone = Rule.R_tone
+    tone = tone_freq
     if trial < 30:
         _opto_trial = False
     elif trial > 30:
