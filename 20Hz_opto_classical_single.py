@@ -144,7 +144,7 @@ for trial in trials:
                                 - data._t_start_abs[trial])
 
     # post-tone response period: opto stim if necessary
-    if _opto_trial is True and ttl_experiment == "y':
+    if _opto_trial is True and ttl_experiment == 'y':
         thread_ttl.start()
     elif _opto_trial is False:
         time.sleep(2)
