@@ -129,7 +129,10 @@ for trial in trials:
     data.opto_trial[trial] = _opto_trial
 
     thread_R = threading.Thread(target=lick_port_R.Lick, args=(1000, 8))
-    thread_ttl = threading.Thread(target=TTL_opto.deliver_pulses)
+   
+    if ttl_experiment == 'y':
+        thread_ttl = threading.Thread(target=TTL_opto.deliver_pulses)
+   
     thread_R.start()
 
     # wait for baseline
